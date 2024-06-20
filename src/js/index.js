@@ -18,11 +18,23 @@ const SecondListElement = document.getElementById('second-list');
 const FirstListElementContent = FirstListElement.textContent;
 const SecondListElementContent = SecondListElement.textContent;
 
-FirstListElementContent = SecondListElement.textContent;
-SecondListElementContent = FirstListElement.textContent;
-
-//FirstListElement.textContent = ;
-//console.dir(FirstListElement);
+SecondListElement.textContent = FirstListElementContent;
+FirstListElement.textContent = SecondListElementContent;
 
 //console.dir(FirstListElement);
 //console.dir(SecondListElement);
+
+//Usando este HTML muestra por consola el número de etiquetas que hay de cada cosa.  - Hay 1 Header - Hay 1 h1 - Hay 2 nav
+
+const NumberTagsElement = document.querySelectorAll('header');
+
+console.dir(NumberTagsElement[1]);
+
+console.log(
+  `Hay ${NumberTagsElement[1].firstElementChild.nodeType} ${NumberTagsElement[1].firstElementChild.localName}`,
+);
+console.log(`Hay ${NumberTagsElement[1].children[1].nodeType} ${NumberTagsElement[1].children[1].localName}`);
+console.log(
+  `Hay ${NumberTagsElement[1].previousElementSibling.nodeType} ${NumberTagsElement[1].previousElementSibling.localName}`,
+);
+console.log(`Hay ${NumberTagsElement[1].childNodes[4].nodeType} ${NumberTagsElement[1].childNodes[4].localName}`);
