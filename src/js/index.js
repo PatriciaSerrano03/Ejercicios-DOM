@@ -8,25 +8,25 @@ const startPointElement = document.getElementById('start-point');
 //console.dir(startPointElement);
 
 console.log(
-  `Soy un ${startPointElement.tagName} con el id ${startPointElement.id} y la clase ${startPointElement.className} mi padre es un ${startPointElement.parentElement.tagName} con el id ${startPointElement.parentElement.id} y la clase ${startPointElement.parentElement.className} y mi hermano mayor es un ${startPointElement.previousElementSibling.previousElementSibling.tagName} con el id ${startPointElement.previousElementSibling.previousElementSibling.id} y la clase ${startPointElement.previousElementSibling.previousElementSibling.className} `,
+  `Soy un ${startPointElement.tagName} con el id ${startPointElement.id} y la clase ${startPointElement.className}, mi padre es un ${startPointElement.parentElement.tagName} con el id ${startPointElement.parentElement.id} y la clase ${startPointElement.parentElement.className}, mi hermano mediano es un ${startPointElement.previousElementSibling.tagName} con el id ${startPointElement.previousElementSibling.id} y la clase ${startPointElement.previousElementSibling.className} y mi hermano mayor es un ${startPointElement.previousElementSibling.previousElementSibling.tagName} con el id ${startPointElement.previousElementSibling.previousElementSibling.id} y la clase ${startPointElement.previousElementSibling.previousElementSibling.className}`,
 );
 
 //Partiendo de esta lista, intercambia los textos de los li, deberás tener este resultado sin modificar a mano el HTML. Importante, no hay que mover el <li> sólo cambiar el contenido.
 
 const FirstListElement = document.getElementById('first-list');
 const SecondListElement = document.getElementById('second-list');
-const FirstListElementContent = FirstListElement.textContent;
-const SecondListElementContent = SecondListElement.textContent;
+const FirstContentElement = FirstListElement.textContent;
+const SecondContentElement = SecondListElement.textContent;
 
-SecondListElement.textContent = FirstListElementContent;
-FirstListElement.textContent = SecondListElementContent;
+SecondListElement.textContent = FirstContentElement;
+FirstListElement.textContent = SecondContentElement;
 
 //console.dir(FirstListElement);
 //console.dir(SecondListElement);
 
 //Usando este HTML muestra por consola el número de etiquetas que hay de cada cosa.  - Hay 1 Header - Hay 1 h1 - Hay 2 nav
 
-const NumberTagsElement = document.querySelectorAll('header');
+/* const NumberTagsElement = document.querySelectorAll('header');
 
 console.dir(NumberTagsElement[1]);
 
@@ -37,4 +37,4 @@ console.log(`Hay ${NumberTagsElement[1].children[1].nodeType} ${NumberTagsElemen
 console.log(
   `Hay ${NumberTagsElement[1].previousElementSibling.nodeType} ${NumberTagsElement[1].previousElementSibling.localName}`,
 );
-console.log(`Hay ${NumberTagsElement[1].childNodes[4].nodeType} ${NumberTagsElement[1].childNodes[4].localName}`);
+console.log(`Hay ${NumberTagsElement[1].childNodes[4].nodeType} ${NumberTagsElement[1].childNodes[4].localName}`); */
